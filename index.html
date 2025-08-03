@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayiel Raja Sundar B - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a; /* Dark Gray background */
+            color: #d1d5db; /* Light text color */
+        }
+        .container {
+            max-width: 1200px;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2d3748; /* Darker scrollbar track */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* Scrollbar thumb color */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #6366f1, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Status Message Display -->
+    <div id="status-message" class="fixed top-4 left-1/2 -translate-x-1/2 p-4 rounded-lg shadow-md z-50 text-white font-semibold hidden transition-all duration-300"></div>
+
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header/Hero Section -->
+        <header class="text-center py-16 mb-12">
+            <div class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-indigo-600 shadow-lg">
+                <img src="DSC_0381.jpg" onerror="this.onerror=null;this.src='https://placehold.co/192x192/4c51bf/ffffff?text=MRB';" alt="Mayiel Raja Sundar B" class="object-cover w-full h-full">
+            </div>
+            <h1 id="profile-name" class="text-5xl font-extrabold text-white mb-2">Mayiel Raja Sundar B</h1>
+            <p id="profile-profession" class="text-xl text-gray-400 mb-4">Electronics and Communication Engineer</p>
+            <p id="profile-about-summary" class="text-lg text-gray-300 max-w-2xl mx-auto"></p>
+            <div class="flex justify-center space-x-6 mt-6">
+                <a id="linkedin-link" href="#" target="_blank" class="text-gray-400 hover:text-blue-500 transition duration-300">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a id="github-link" href="#" target="_blank" class="text-gray-400 hover:text-gray-200 transition duration-300">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Left Column: Resume & Skills -->
+            <div class="md:col-span-1 space-y-8">
+                <!-- Resume Section -->
+                <section id="resume" class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-white mb-4">Resume</h2>
+                    <div class="space-y-4">
+                        <!-- Education -->
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-200">Education</h3>
+                            <div class="mt-2 text-gray-300 space-y-2">
+                                <p><strong>Vel Tech Multi Tech Dr. Rangarajan Dr. Sakunthala Engineering College</strong></p>
+                                <p>B.E. in Electronics and Communication Engineering (2021-2025)</p>
+                                <p>CGPA: 7.84</p>
+                                <p><strong>Ebenezer Matriculation Higher Secondary School</strong></p>
+                                <p>HSC (2020-2021) - 83.73%</p>
+                                <p><strong>Bhaktavatsalam Vidyashram</strong></p>
+                                <p>SSLC (2018-2019) - 78%</p>
+                            </div>
+                        </div>
+                        <!-- Responsibilities -->
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-200 mt-6">Responsibilities</h3>
+                            <div class="mt-2 text-gray-300 space-y-2">
+                                <p><strong>Student Coordinator - IEEE Student Branch</strong></p>
+                                <ul class="list-disc list-inside ml-4">
+                                    <li>Organized and managed technical workshops and symposiums.</li>
+                                    <li>Led a team of six in planning the annual IEEE technical symposium.</li>
+                                    <li>Awarded Best Student Coordinator.</li>
+                                </ul>
+                                <p><strong>Placement Coordinator - ECE Dept</strong></p>
+                                <ul class="list-disc list-inside ml-4">
+                                    <li>Acted as liaison between students, faculty, and recruiters.</li>
+                                    <li>Advocated for student needs in college board meetings.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Skills -->
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-200 mt-6">Skills</h3>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">JAVA</span>
+                                <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                                <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">SQL</span>
+                                <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">HTML</span>
+                                <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Data Structures</span>
+                                <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Algorithms</span>
+                                <span class="bg-gray-700 text-gray-300 text-sm font-medium px-3 py-1 rounded-full">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <a href="DSC_0381.jpeg" target="_blank" id="download-cv-btn" class="block w-full text-center bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300">
+                    <i class="fas fa-download mr-2"></i> Download Resume
+                </a>
+            </div>
+
+            <!-- Right Column: Projects & Contact -->
+            <div class="md:col-span-2 space-y-8">
+                <!-- Projects Section -->
+                <section id="projects" class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-white mb-4">Projects</h2>
+                    <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Project cards will be populated by JavaScript -->
+                    </div>
+                </section>
+                <!-- Contact Section -->
+                <section id="contact" class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-white mb-4">Contact</h2>
+                    <p class="text-lg text-gray-300 mb-4">Feel free to get in touch!</p>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" id="name" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-gray-200 rounded-md">
+                        </div>
+                        <div>
+                            <input type="email" id="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-gray-200 rounded-md">
+                        </div>
+                        <div>
+                            <textarea id="message" rows="4" placeholder="Your Message" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-gray-200 rounded-md"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 px-4 rounded-md shadow-lg hover:bg-indigo-700 transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-gray-500 text-sm">
+        <p>&copy; 2024 <span id="footer-name">Mayiel Raja Sundar B</span>. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for fetching and displaying data -->
+    <script>
+        const profileName = document.getElementById('profile-name');
+        const profileProfession = document.getElementById('profile-profession');
+        const profileAboutSummary = document.getElementById('profile-about-summary');
+        const githubLink = document.getElementById('github-link');
+        const linkedinLink = document.getElementById('linkedin-link');
+        const downloadCVBtn = document.getElementById('download-cv-btn');
+        const footerName = document.getElementById('footer-name');
+        const projectsContainer = document.getElementById('projects-container');
+        const statusMessage = document.getElementById('status-message');
+
+        const showStatus = (message, isError = false) => {
+            statusMessage.textContent = message;
+            statusMessage.className = `fixed top-4 left-1/2 -translate-x-1/2 p-4 rounded-lg shadow-md z-50 font-semibold transition-all duration-300 transform ${isError ? 'bg-red-500' : 'bg-blue-500'}`;
+            if (!isError) {
+                setTimeout(hideStatus, 3000);
+            }
+        };
+        const hideStatus = () => {
+            statusMessage.className = 'fixed top-4 left-1/2 -translate-x-1/2 p-4 rounded-lg shadow-md z-50 hidden transition-all duration-300';
+        };
+
+        const fetchProfileData = async () => {
+            showStatus('Fetching profile data...');
+            try {
+                const response = await fetch('http://localhost:8080/api/profile-from-llm');
+                if (!response.ok) throw new Error('Server not reachable. Please ensure your Spring Boot backend is running.');
+                const profile = await response.json();
+                
+                profileName.textContent = profile.name;
+                profileProfession.textContent = profile.profession;
+                profileAboutSummary.textContent = profile.about;
+                githubLink.href = profile.githubUrl;
+                linkedinLink.href = profile.linkedinUrl;
+                downloadCVBtn.href = profile.resumeUrl;
+                footerName.textContent = profile.name;
+                
+                showStatus('Profile data loaded successfully!');
+            } catch (error) {
+                console.error('Error fetching profile data:', error);
+                showStatus('Error: Failed to fetch profile. Is your Spring Boot backend running?', true);
+                
+                // Fallback to hardcoded values
+                profileName.textContent = "MAYIEL RAJA SUNDAR B";
+                profileProfession.textContent = "Electronics and Communication Engineer";
+                profileAboutSummary.textContent = "An aspiring Electronics and Communication Engineering student with a passion for programming and data analysis. Skilled in JAVA, Python, and machine learning, I’m eager to build innovative solutions and tackle challenging technical problems.";
+                githubLink.href = "https://github.com/MayielRaja";
+                linkedinLink.href = "https://www.linkedin.com/in/mayiel-raja-sundar-balamurugan-64a4641a7/";
+                downloadCVBtn.href = "https://drive.google.com/file/d/1sOa_5CPN0YVrZbJv7pJfjT9SDX8hGCBp/view?usp=sharing";
+                footerName.textContent = "Mayiel Raja Sundar B";
+            }
+        };
+
+        const fetchProjectData = async () => {
+            showStatus('Fetching project data...');
+            try {
+                const response = await fetch('http://localhost:8080/api/projects');
+                if (!response.ok) throw new Error('Server not reachable.');
+                const projects = await response.json();
+
+                projectsContainer.innerHTML = '';
+                projects.forEach((project, index) => {
+                    const projectCard = document.createElement('div');
+                    projectCard.className = 'bg-gray-700 p-6 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300';
+                    projectCard.innerHTML = `
+                        <img src="${project.imageUrl}" alt="${project.name}" class="rounded-lg mb-4 w-full h-40 object-cover">
+                        <h3 class="text-xl font-bold text-white mb-2">${project.name}</h3>
+                        <p id="project-description-${index}" class="text-gray-300 text-sm mb-4">${project.description}</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${(project.technologies && project.technologies.split(',')) ? project.technologies.split(',').map(tech => `<span class="bg-gray-600 text-gray-200 text-xs font-medium px-2 py-1 rounded-full">${tech.trim()}</span>`).join('') : ''}
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <a href="${project.liveUrl}" target="_blank" class="text-indigo-400 hover:underline font-medium text-sm">View Live</a>
+                            <a href="${project.githubUrl}" target="_blank" class="text-gray-400 hover:underline font-medium text-sm">GitHub</a>
+                            <button onclick="generateCreativeSummary('${project.name}', '${project.description}', '${index}')" class="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-semibold shadow-md hover:bg-yellow-500 transition-colors duration-200">
+                                ✨ Get Creative Summary
+                            </button>
+                        </div>
+                    `;
+                    projectsContainer.appendChild(projectCard);
+                });
+                showStatus('Project data loaded successfully!');
+            } catch (error) {
+                console.error('Error fetching project data:', error);
+                showStatus('Error: Failed to fetch projects. Is your Spring Boot backend running?', true);
+                
+                // Fallback projects to display
+                const fallbackProjects = [
+                    {
+                        name: "MoneyMate - Android Expense Tracker App",
+                        description: "Built a mobile application to track student expenses with add, delete, and view features. Used SQLite for offline data storage.",
+                        technologies: "Java, Android Studio, SQLite, XML",
+                        liveUrl: "#",
+                        githubUrl: "https://github.com/MayielRaja/MoneyMate",
+                        imageUrl: "MoneyMate.jpg"
+                    },
+                    {
+                        name: "Automated Smart Sericulture System",
+                        description: "Designed an automated system for silkworm rearing using ESP32 to monitor and control environmental conditions, integrated with Firebase.",
+                        technologies: "ESP32, C++, Firebase Realtime Database",
+                        liveUrl: "#",
+                        githubUrl: "https://github.com/MayielRaja/Sericulture-IOT",
+                        imageUrl: "logo2.jpeg"
+                    },
+                    {
+                        name: "Asteroid Classification Predictive Model",
+                        description: "Developed a predictive model achieving 90% accuracy using Python and machine learning algorithms to classify asteroids based on their properties.",
+                        technologies: "Python, NumPy, Pandas, Seaborn, Matplotlib",
+                        liveUrl: "#",
+                        githubUrl: "https://github.com/MayielRaja/Asteroid-Classification",
+                        imageUrl: "asteroid.jpg"
+                    }
+                ];
+                projectsContainer.innerHTML = '';
+                fallbackProjects.forEach((project, index) => {
+                    const projectCard = document.createElement('div');
+                    projectCard.className = 'bg-gray-700 p-6 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300';
+                    projectCard.innerHTML = `
+                        <img src="${project.imageUrl}" alt="${project.name}" class="rounded-lg mb-4 w-full h-40 object-cover">
+                        <h3 class="text-xl font-bold text-white mb-2">${project.name}</h3>
+                        <p id="project-description-${index}" class="text-gray-300 text-sm mb-4">${project.description}</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${project.technologies.split(',').map(tech => `<span class="bg-gray-600 text-gray-200 text-xs font-medium px-2 py-1 rounded-full">${tech.trim()}</span>`).join('')}
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <a href="${project.liveUrl}" target="_blank" class="text-indigo-400 hover:underline font-medium text-sm">View Live</a>
+                            <a href="${project.githubUrl}" target="_blank" class="text-gray-400 hover:underline font-medium text-sm">GitHub</a>
+                            <button onclick="generateCreativeSummary('${project.name}', '${project.description}', '${index}')" class="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-semibold shadow-md hover:bg-yellow-500 transition-colors duration-200">
+                                ✨ Get Creative Summary
+                            </button>
+                        </div>
+                    `;
+                    projectsContainer.appendChild(projectCard);
+                });
+            }
+        };
+
+        const generateCreativeSummary = async (projectName, projectDescription, index) => {
+            const descriptionElement = document.getElementById(`project-description-${index}`);
+            const originalDescription = descriptionElement.textContent;
+            descriptionElement.textContent = "Generating summary... please wait.";
+            try {
+                const prompt = `Write a short, engaging, and creative summary for a portfolio project titled "${projectName}". The project is described as: "${projectDescription}". The summary should be a single paragraph, less than 50 words, and sound impressive.`;
+                const payload = {
+                    contents: [{ role: "user", parts: [{ text: prompt }] }]
+                };
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                const text = result.candidates[0].content.parts[0].text;
+                descriptionElement.textContent = text;
+            } catch (error) {
+                console.error('Error generating summary:', error);
+                descriptionElement.textContent = originalDescription;
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchProfileData();
+            fetchProjectData();
+        });
+    </script>
+</body>
+</html>
