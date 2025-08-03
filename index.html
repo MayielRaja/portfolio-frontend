@@ -13,31 +13,25 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #1a1a1a; /* Dark Gray background */
-            color: #d1d5db; /* Light text color */
+            background-color: #1a1a1a;
+            color: #d1d5db;
         }
         .container {
             max-width: 1200px;
         }
-        /* Custom scrollbar for a cleaner look */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #2d3748; /* Darker scrollbar track */
+            background: #2d3748;
             border-radius: 10px;
         }
         ::-webkit-scrollbar-thumb {
-            background: #4a5568; /* Scrollbar thumb color */
+            background: #4a5568;
             border-radius: 10px;
         }
         ::-webkit-scrollbar-thumb:hover {
             background: #718096;
-        }
-        .text-gradient {
-            background-image: linear-gradient(to right, #6366f1, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
@@ -49,7 +43,7 @@
         <!-- Header/Hero Section -->
         <header class="text-center py-16 mb-12">
             <div class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-indigo-600 shadow-lg">
-                <img src="DSC_0381.jpeg" onerror="this.onerror=null;this.src='https://placehold.co/192x192/4c51bf/ffffff?text=MRB';" alt="Mayiel Raja Sundar B" class="object-cover w-full h-full">
+                <img src="DSC_0381.jpg" onerror="this.onerror=null;this.src='https://placehold.co/192x192/4c51bf/ffffff?text=MRB';" alt="Mayiel Raja Sundar B" class="object-cover w-full h-full">
             </div>
             <h1 id="profile-name" class="text-5xl font-extrabold text-white mb-2">Mayiel Raja Sundar B</h1>
             <p id="profile-profession" class="text-xl text-gray-400 mb-4">Electronics and Communication Engineer</p>
@@ -117,7 +111,7 @@
                         </div>
                     </div>
                 </section>
-                <a href="DSC_0381.jpeg" target="_blank" id="download-cv-btn" class="block w-full text-center bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300">
+                <a href="https://drive.google.com/file/d/1tUK01fZy1mMFt4sHqfLgQCRZgI2F1zA6/view?usp=sharing" target="_blank" id="download-cv-btn" class="block w-full text-center bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300">
                     <i class="fas fa-download mr-2"></i> Download Resume
                 </a>
             </div>
@@ -161,6 +155,35 @@
 
     <!-- JavaScript for fetching and displaying data -->
     <script>
+        // Custom Alert Functionality
+        const viewButtons = document.querySelectorAll('.view-project-btn');
+        const customAlert = document.getElementById('custom-alert');
+        const projectNameSpan = document.getElementById('project-name');
+        const closeAlert = document.getElementById('close-alert');
+
+        if(viewButtons) {
+            viewButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const projectName = button.getAttribute('data-project');
+                    projectNameSpan.textContent = projectName;
+                    customAlert.style.display = 'flex';
+                });
+            });
+        }
+        if(closeAlert) {
+            closeAlert.addEventListener('click', () => {
+                customAlert.style.display = 'none';
+            });
+        }
+        if(customAlert) {
+            customAlert.addEventListener('click', (e) => {
+                if (e.target === customAlert) {
+                    customAlert.style.display = 'none';
+                }
+            });
+        }
+        
+        // Dynamic content from backend
         const profileName = document.getElementById('profile-name');
         const profileProfession = document.getElementById('profile-profession');
         const profileAboutSummary = document.getElementById('profile-about-summary');
@@ -254,7 +277,7 @@
                         technologies: "Java, Android Studio, SQLite, XML",
                         liveUrl: "#",
                         githubUrl: "https://github.com/MayielRaja/MoneyMate",
-                        imageUrl: "MoneyMate.jpeg"
+                        imageUrl: "Moneymate.jpg"
                     },
                     {
                         name: "Automated Smart Sericulture System",
